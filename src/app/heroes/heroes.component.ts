@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HEROES } from '../mock-heroes';
 import { Hero } from '../hero';
+import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 
 @Component({
   selector: 'app-heroes', // The component's CSS element selector.
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HeroDetailComponent],
   templateUrl: './heroes.component.html', // 	The location of the component's template file.
   styleUrl: './heroes.component.css', // The location of the component's private CSS styles.
 })
@@ -18,7 +19,7 @@ export class HeroesComponent {
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
-  }
+}
 
 
 // Notes
